@@ -25,7 +25,7 @@ echo "Cloning destination git repository"
 git config --global user.email "$USER_EMAIL"
 git config --global user.name "$DESTINATION_GITHUB_USERNAME"
 git clone "https://$API_TOKEN_GITHUB@github.com/$DESTINATION_REPOSITORY_USERNAME/$DESTINATION_REPOSITORY_NAME.git" "$CLONE_DIR"
-git checkout "$TARGET_BRANCH"
+git checkout -b "$TARGET_BRANCH"
 ls -la "$CLONE_DIR"
 
 TARGET_DIR=$(mktemp -d)
