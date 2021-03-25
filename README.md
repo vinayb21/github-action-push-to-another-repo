@@ -50,6 +50,9 @@ Then make the token available to the Github Action following the steps:
 * On the left hand side pane click on "Secrets"
 * Click on "Add a new secret" and name it "API_TOKEN_GITHUB"
 
+### `tag` (argument)
+Tag for the release
+
 ## Example usage
 ```yaml
       - name: Pushes to another repository
