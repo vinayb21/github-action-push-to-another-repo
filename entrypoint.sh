@@ -45,10 +45,10 @@ COMMIT_MESSAGE="${COMMIT_MESSAGE/ORIGIN_COMMIT/$ORIGIN_COMMIT}"
 
 git add .
 git status
-git tag -a $TAG -m ""
+git commit --message "$COMMIT_MESSAGE"
 
-# git diff-index : to avoid doing the git commit failing if there are no changes to be commit
-git diff-index --quiet HEAD || git commit --message "$COMMIT_MESSAGE"
+echo "Adding tag"
+git tag -a $TAG -m ""
 
 echo "Pushing git commit"
 # --set-upstream: sets de branch when pushing to a branch that does not exist
